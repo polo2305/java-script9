@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Entrega 9 - Asincronismo y Promesas</title>
+    <!-- Vinculación del CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Vinculación del JS con defer -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Mi Simulador de Tienda</h1>
+            <p>Inventario sincronizado y Carga Asíncrona</p>
+        </header>
+
+        <!-- Sección de Avisos Asíncronos (setTimeout y Promesas) -->
+        <section class="async-section">
+            <div id="info-temporizador" class="banner-info oculto"></div>
+            <div id="estado-carga" class="banner-carga">⏳ Inicializando sistema...</div>
+        </section>
+
+        <!-- Formulario para agregar nuevos productos -->
+        <section class="form-section">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="form-producto">
+                <div class="input-group">
+                    <label for="nombre-input">Nombre:</label>
+                    <input type="text" id="nombre-input" placeholder="Ej: Auriculares" required>
+                </div>
+                <div class="input-group">
+                    <label for="precio-input">Precio ($):</label>
+                    <input type="number" id="precio-input" placeholder="Ej: 35000" required min="1">
+                </div>
+                <button type="submit" id="btn-agregar">+ Agregar Producto</button>
+            </form>
+        </section>
+
+        <!-- Barra de búsqueda interactiva -->
+        <section class="search-section">
+            <input type="text" id="buscador-input" placeholder="🔍 Buscar producto en la lista...">
+        </section>
+
+        <!-- Contenedor donde se renderizará dinámicamente la lista -->
+        <section class="list-section">
+            <h2>Inventario Actual</h2>
+            <div id="contenedor-items">
+                <!-- Los productos se inyectarán aquí mediante JS -->
+            </div>
+        </section>
+
+        <!-- Mensaje de feedback visual -->
+        <div id="feedback-mensaje" class="oculto"></div>
+    </div>
+
+</body>
+</html>
